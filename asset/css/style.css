@@ -1,10 +1,235 @@
-*{
+* {
     box-sizing: border-box;
 }
-html{
+:root {
+    --primary-color: #2ac9bf;
+}
+html {
     font-size: 62.5%;
 }
-body{
+body {
     font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+/*------------------ common ------------------ */
+a {
+    text-decoration: none;
+}
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+.btn {
+    display: inline-block;
+    min-width: 186px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 16px;
+    line-height: 68px;
+    background: var(--primary-color);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+/*------------------ header ------------------ */
+.header {
+    background: #ffffff;
+}
+.header.fixed {
+    position: sticky;
+    top: -44px;
+    z-index: 1;
+}
+.header .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 52px 0 8px;
+}
+.nav ul {
+    display: flex;
+}
+.nav ul a {
+    font-size: 1.6rem;
+    color: #2f3a3b;
+    padding: 8px 20px;
+}
+.nav a:hover,
+.nav li.active a {
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
+    color: #2f3a3b;
+}
+.action .action-link {
+    font-size: 1.6rem;
+    color: #494949;
+    margin-right: 24px;
+}
+.action .action-btn {
+    line-height: 48px;
+    min-width: 108px;
+    font-size: 1.6rem;
+    border: 1px solid #1ebfc1;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--primary-color);
+}
+.action .action-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transition: 0.4s ease-in-out;
+}
+/*------------------ hero ------------------ */
+.hero {
+    padding-top: 42px;
+    background-color: #ffffff;
+}
+.hero .body {
+    display: flex;
+}
+/* hero-left */
+.hero .content-block {
+    width: 45%;
+    padding: 93px 0 0;
+}
+.hero .content-block .note {
+    font-size: 1.4rem;
+    color: #767e7e;
+}
+.hero .content-block .heading {
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 6.2rem;
+    line-height: 116%;
+    color: #0d1111;
+}
+.hero .content-block .desc {
+    width: 374px;
+    font-weight: 400;
+    margin-top: 46px;
+    font-size: 1.8rem;
+    line-height: 178%;
+    color: #9da6a5;
+}
+.hero .cta-group {
+    display: flex;
+    align-items: center;
+    margin-top: 52px;
+}
+.hero .watch-video {
+    border: none;
+    background-color: #ffff;
+    display: flex;
+}
+.hero .watch-video .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-color: var(--primary-color);
+    background: transparent;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    margin-left: 50px;
+    color: var(--primary-color);
+}
+.hero .watch-video .icon:hover {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+/* hero-right */
+.hero .media-block {
+    position: relative;
+    width: 55%;
+}
+
+.hero .media-block .img {
+    width: 576px;
+    height: 631px;
+    object-fit: cover;
+}
+.hero-courses {
+    display: flex;
+    position: absolute;
+    left: -40px;
+    top: 149px;
+    background: #fefefd;
+    width: 157px;
+    padding: 17px 25px 18px;
+    box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+}
+.hero-courses .label {
+    margin-left: 16px;
+}
+.hero-schedules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 46px;
+    left: -65px;
+    width: 124px;
+    padding: 16px 25px 23px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+}
+.hero-schedules .label {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #0d1111;
+}
+.hero-schedules img:first-child,
+.hero-schedules img:last-child {
+    margin-top: 4px;
+}
+.hero-student {
+    position: absolute;
+    width: 207px;
+    bottom: 41px;
+    right: 45px;
+    padding: 17px 35px;
+    /* background: #ffff; */
+    background: red;
+    box-shadow: 0px 12px 80px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+}
+.hero .label {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #0d1111;
+}
+.hero-student .avatar-group {
+    margin-top: 8px;
+    display: flex;
+}
+.hero-student .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color, #ffff);
+    margin-left: -7px;
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+.hero-student .avatar:first-child {
+    margin-left: 0;
 }
